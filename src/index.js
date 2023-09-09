@@ -80,3 +80,43 @@ function errorMsg() {
 function rmError() {
   form.classList.remove("error");
 }
+
+ScrollReveal().reveal("header", {
+  durition: 2000,
+  origin: "top",
+  distance: "100px",
+  opacity: 0.7,
+});
+
+ScrollReveal().reveal("#intro-text", {
+  delay: 500,
+  origin: "left",
+  distance: "100px",
+  durition: 2000,
+});
+
+ScrollReveal().reveal("#intro-img", {
+  delay: 700,
+  origin: "right",
+  distance: "100px",
+  durition: 2000,
+});
+
+ScrollReveal().reveal("#short-content", {
+  durition: 2000,
+});
+
+ScrollReveal().reveal(".card", {
+  durition: 1000,
+  interval: 500,
+  distance: "200px",
+  origin: "top",
+});
+
+ScrollReveal().reveal("#attraction-content", {
+  durition: 1000,
+});
+
+ScrollReveal().reveal("#footer-content", {
+  durition: 2000,
+});

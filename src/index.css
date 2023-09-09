@@ -31,7 +31,7 @@ form.error input {
 form.error input::placeholder {
   color: red;
 }
-form.error::before {
+form.error .form-froup::before {
   content: "Please add a valid link";
   font-style: italic;
   font-size: 14px;
@@ -91,7 +91,9 @@ hr {
 #intro-content {
   min-height: calc(100vh - 107px);
 }
-
+#intro-img {
+  z-index: -2;
+}
 #intro-btn {
   width: 200px;
 }
