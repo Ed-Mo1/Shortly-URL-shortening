@@ -2,6 +2,7 @@ const api = "https://api.shrtco.de/v2/shorten?url=";
 const linkBox = document.querySelector("#links-container");
 const link = document.querySelector("input");
 const form = document.querySelector("form");
+
 let links = [];
 
 document.forms[0].onsubmit = function (e) {
@@ -12,6 +13,10 @@ document.forms[0].onsubmit = function (e) {
 document.forms[0].oninput = function () {
   rmError();
 };
+document.querySelector(".navbar-toggler").onclick = () => {
+  document.querySelector("#intro-content").classList.toggle("hide");
+};
+
 async function shortLink() {
   try {
     const response = await fetch(`${api}${link.value}`);

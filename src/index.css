@@ -90,12 +90,12 @@ hr {
 
 #intro-content {
   min-height: calc(100vh - 107px);
+}
+#intro-content.hide {
   position: relative;
   z-index: -3;
 }
-#intro-img {
-  z-index: -2;
-}
+
 #intro-btn {
   width: 200px;
 }
