@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+:root {
+  --Cyan: hsl(180, 66%, 49%);
+  --Dark-Violet: rgb(59, 48, 84);
+  --Red: hsl(0, 87%, 67%);
+  --Gray: #eff1f7ff;
+  --Grayish-Violet: hsl(257, 7%, 63%);
+  --Very-Dark-Blue: hsl(255, 11%, 22%);
+  --Very-Dark-Violet: hsl(260, 8%, 14%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+input {
+  border: 3px solid #fff;
+  outline: none;
+}
+
+form.error input {
+  color: red;
+  border-color: red;
+}
+form.error input::placeholder {
+  color: red;
+}
+form.error::before {
+  content: "Please add a valid link";
+  font-style: italic;
+  font-size: 14px;
+  position: absolute;
+  color: red;
+  width: 100%;
+  height: 100%;
+  top: 105%;
+  left: 0;
+}
+/* navbar */
+
+:is(.nav-link, #login) {
+  color: var(--Grayish-Violet);
+  transition: color 0.3s linear;
+}
+
+:is(.nav-link, #login):hover {
+  color: var(--Very-Dark-Violet) !important;
+}
+hr {
+  height: 2px;
+}
+.main-btn {
+  background-color: var(--Cyan) !important;
+  transition: opacity 0.3s linear;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler i {
+  font-size: 2rem;
+}
+.main-btn:hover {
+  opacity: 0.7 !important;
+}
+
+@media (width<768px) {
+  #navbarNav {
+    align-items: unset !important;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background-color: var(--Dark-Violet);
+  }
+  :is(.nav-link, #login) {
+    color: #fff !important;
+  }
+  :is(.nav-link, #login):hover {
+    color: #fff !important;
+  }
+}
+
+/* intro sect */
+
+#intro-content {
+  min-height: calc(100vh - 107px);
+}
+
+#intro-btn {
+  width: 200px;
+}
+/* short link */
+#short-content {
+  min-height: 150px;
+  background-image: linear-gradient(
+      90deg,
+      rgba(59, 48, 84, 0.9),
+      rgba(59, 48, 84, 0.9)
+    ),
+    url(../images/bg-shorten-desktop.svg);
+  background-size: cover;
+}
+#link-form {
+  position: relative;
+}
+
+#link-form::before {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  content: "";
+  bottom: 0;
+  left: 0;
+  background-color: var(--Gray);
+  z-index: -2;
+}
+.copy-btn {
+  width: 150px;
+}
+.long-link {
+  text-overflow: ellipsis;
+}
+.short-link a {
+  color: var(--Cyan);
+}
+/* links */
+#links {
+  background-color: var(--Gray);
+}
+.link {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (width<768px) {
+  #short-content {
+    background-image: linear-gradient(
+        90deg,
+        rgba(59, 48, 84, 0.9),
+        rgba(59, 48, 84, 0.9)
+      ),
+      url(../images/bg-shorten-mobile.svg);
+  }
+  .short-link {
+    width: 100%;
+  }
+}
+@media (width<992px) {
+  .copy-btn {
+    width: 100%;
+  }
+  .long-link {
+    width: 100%;
+  }
+}
+/* advanced sect */
+#advanced {
+  background-color: var(--Gray);
+  padding-bottom: 7rem !important;
+}
+.card-icon {
+  background-color: var(--Very-Dark-Blue);
+  width: fit-content;
+  top: -65px;
+  left: 30px;
+}
+.card-icon img {
+  width: 70px;
+  aspect-ratio: 1/1;
+}
+
+#advanced .card:nth-child(1) {
+  transform: translateY(-70px);
+}
+
+#advanced .card:nth-child(3) {
+  transform: translateY(70px);
+}
+
+#advanced-content::before {
+  content: "";
+  width: 100%;
+  height: 20px;
+  background-color: var(--Cyan);
+  position: absolute;
+  top: 120px;
+  left: 0;
+}
+
+.sec-about {
+  width: 35%;
+  color: var(--Grayish-Violet);
+}
+@media (width<992px) {
+  .sec-about {
+    width: 50%;
+  }
+  .card-icon {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #advanced-content::before {
+    width: 20px;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (width<768px) {
+  .sec-about {
+    width: 90%;
+  }
+}
+/* attraction */
+
+#attraction {
+  background-image: linear-gradient(
+      90deg,
+      rgba(59, 48, 84, 0.9),
+      rgba(59, 48, 84, 0.9)
+    ),
+    url(../images/bg-boost-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (width<768px) {
+  #attraction {
+    background-image: linear-gradient(
+        90deg,
+        rgba(59, 48, 84, 0.9),
+        rgba(59, 48, 84, 0.9)
+      ),
+      url(../images/bg-boost-mobile.svg);
+  }
+}
+/* footer */
+
+footer {
+  background-color: var(--Very-Dark-Violet);
+}
+
+footer a {
+  color: var(--Grayish-Violet);
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+
+footer a:hover {
+  color: var(--Cyan);
+}
+
+footer svg:hover path {
+  transition: 0.3s linear;
+  fill: var(--Cyan);
+}
